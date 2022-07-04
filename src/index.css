@@ -6,8 +6,35 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
+* {
+  margin: 0%;
+  padding: 0%;
+  box-sizing: border-box;  
+}
 
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+/*! HEADER  */
+header{
+  display: flex;
+  background-color: #262626;
+  width: 70%;
+  margin: 0 auto;
+}
+.icon{
+  width: 20%;
+}
+.navbar{
+  display: flex;
+  width: 80%;
+  justify-content:space-around;
+  align-items: center;
+  font-size: 1.5em;
+  color: #cacaca;
+  
+}
+
+/*! HEADER  */
