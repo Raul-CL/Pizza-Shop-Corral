@@ -16,6 +16,9 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+/*! GENERALES  */
+
+/*! GENERALES  */
 
 /*! HEADER  */
 header{
@@ -23,18 +26,28 @@ header{
   background-color: #262626;
   width: 70%;
   margin: 0 auto;
+  max-height: 5%;
+  flex-wrap: nowrap;
 }
 .icon{
-  width: 20%;
+  width: 7%;
 }
 .navbar{
   display: flex;
-  width: 80%;
+  width: 100%;
   justify-content:space-around;
   align-items: center;
   font-size: 1.5em;
   color: #cacaca;
   
 }
+.iconCar{
+  color: #cacaca;
+  font-size: 1.8em;
+}
 
 /*! HEADER  */
+
+/*!  LIST CONTAINER*/
+
+/*!  LIST CONTAINER*/
