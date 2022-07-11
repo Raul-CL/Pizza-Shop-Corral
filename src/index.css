@@ -7,9 +7,9 @@ body {
   -moz-osx-font-smoothing: grayscale;
 }
 * {
-  margin: 0%;
-  padding: 0%;
-  box-sizing: border-box;  
+  padding: 0px;
+  margin: 0px;  
+  box-sizing: border-box;
 }
 
 code {
@@ -17,7 +17,9 @@ code {
     monospace;
 }
 /*! GENERALES  */
-
+.container{
+  width: 80%;
+}
 /*! GENERALES  */
 
 /*! HEADER  */
@@ -30,7 +32,7 @@ header{
   flex-wrap: nowrap;
 }
 .icon{
-  width: 7%;
+  width: 10%;
 }
 .navbar{
   display: flex;
@@ -47,7 +49,54 @@ header{
 }
 
 /*! HEADER  */
+/*! COUNTER  */
+.btnCount{
+  margin: 0em .5em;
+  width: 2em;
+  height: 2em;
+}
+/*! COUNTER  */
 
 /*!  LIST CONTAINER*/
+.ItemListContainer{
+  background-color: #262626;
+  margin: 0px auto;
+}
+.itemContainer{
+  display: flex; 
+  width: 100%;
+  padding: 1em;
+  justify-content: space-around;
+}
+.itemImg{
+  width: 20%;
+  border-radius: 1em;
+}
+.itemTextContainer{
+  width: 50%;
+  display: flex;
+  flex-wrap: wrap;
+  color: #cacaca;
+  margin: 0px;
+  
+}
+.itemTextContainer h3{
+  color: #ef1a15;
+  width: 100%;
+  height: 20%;
+}
+.itemTextContainer p {
+  width: 80%;
+  height: 60%;
+}
+.itemTextContainer label {
+  width: 10%;
+  height: 60%;
+}
+.itemCountContainer{
+  width: 20%;
+  color: #cacaca;
+  text-align: center;
 
+}
 /*!  LIST CONTAINER*/

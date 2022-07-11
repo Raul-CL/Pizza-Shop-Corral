@@ -6,13 +6,13 @@ export const NavBar = () => {
   return (
     <header className='container'>
         <img src={icon} className='icon'></img>
-        <navbar className='navbar'>
+        <nav className='navbar'>
             <label>Home</label>
             <label>Menu</label>
             <label>Ordenar</label>
             <label>Ubicacion</label>
             <CartWidget/>
-        </navbar>
+        </nav>
     </header>
   )
 }
