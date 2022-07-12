@@ -1,6 +1,6 @@
 body {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+  font-family: 'Cascadia Code',-apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
     'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
     sans-serif;
   -webkit-font-smoothing: antialiased;
@@ -50,53 +50,59 @@ header{
 
 /*! HEADER  */
 /*! COUNTER  */
-.btnCount{
-  margin: 0em .5em;
-  width: 2em;
-  height: 2em;
-}
+
 /*! COUNTER  */
 
 /*!  LIST CONTAINER*/
-.ItemListContainer{
+.itemListContainer{  
   background-color: #262626;
-  margin: 0px auto;
+  width: 80%;
+  margin: 3em auto;
 }
-.itemContainer{
-  display: flex; 
+.itemList{
   width: 100%;
-  padding: 1em;
+  display: flex;
+  flex-wrap: wrap;
   justify-content: space-around;
 }
-.itemImg{
+.itemContainer{
+  display: flex;
   width: 20%;
+  margin: 1em 1em;
+  flex-direction: column;
+  border-radius: 1em;
+  box-shadow: 2px 2px 15px rgba(107, 107, 107, 0.5);
+
+}
+.itemImg{
   border-radius: 1em;
 }
 .itemTextContainer{
-  width: 50%;
-  display: flex;
-  flex-wrap: wrap;
+  text-align: center;
   color: #cacaca;
-  margin: 0px;
+  font-size: large;
   
 }
 .itemTextContainer h3{
-  color: #ef1a15;
-  width: 100%;
-  height: 20%;
+  color: #ef1c17;
+  font-size: 1.5em;
 }
-.itemTextContainer p {
-  width: 80%;
-  height: 60%;
-}
-.itemTextContainer label {
-  width: 10%;
-  height: 60%;
+.itemTextContainer p{  
+  font-size: 1em;
 }
 .itemCountContainer{
-  width: 20%;
   color: #cacaca;
-  text-align: center;
-
+  display: flex;
+  justify-content: space-evenly;
+  margin-top: auto;
+  padding-bottom: 1em;
+}
+.itemCountContainer button{
+  padding: .5em;
+  font-size: 1em;
+  border-radius: .3em;
+  background-color: #ef1c17;
+  color: #cacaca;
+  font-weight: bold;
 }
 /*!  LIST CONTAINER*/

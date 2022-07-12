@@ -1,19 +1,28 @@
 import React, { useState } from 'react'
 
 
-export const ItemCount = () => {
+export const ItemCount = ({stock,initial}) => {
 
-  const [counter, setCounter] = useState(0)
+  const [counter, setCounter] = useState(initial)
   
-    const count = (value) =>{
-        setCounter(counter + value)
-    }
+  const plus = e =>{
+    console.log(e)  
+    counter < stock 
+    ? setCounter(counter +1)
+    : console.log("Esto insuficiente... lo sentimos")
+  }
+  
+  const less = e =>{
+    console.log(e)  
+    counter > 1 && setCounter(counter -1)
+    
+  }
     
   return (
     <div className='itemCountContainer'>
-        <button className='btnCount' onClick={e =>{count(-1)}}>-</button>
+        <button className='btnCount' onClick={e =>{less(e)}}>-</button>
         <label>{counter}</label>
-        <button className='btnCount' onClick={e =>{count(1)}}>+</button>
+        <button className='btnCount' onClick={e =>{plus(e)}}>+</button>
     </div>
   )
 }

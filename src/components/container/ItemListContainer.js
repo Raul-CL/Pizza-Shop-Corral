@@ -24,7 +24,7 @@ export const ItemListContainer = () => {
 
   //console.log(items)
   return (  
-    <section className='ItemListContainer container'>
+    <section className='itemListContainer'>
     <ItemList items={items}></ItemList>
     </section>
     
