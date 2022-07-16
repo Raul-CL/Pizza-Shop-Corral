@@ -3,6 +3,7 @@ import {products} from '../container/Products'
 import { ItemList } from './ItemList'
 
 
+
 export const ItemListContainer = () => {
   const [items, setItems] = useState([])
   
@@ -19,7 +20,7 @@ export const ItemListContainer = () => {
       })
       .catch((error)=>{
         console.log(error)
-      })
+      }) 
   },[])
 
   //console.log(items)

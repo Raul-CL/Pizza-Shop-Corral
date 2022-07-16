@@ -5,6 +5,11 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  background-image: url('../../pizza-shop-corral/public/img/background_01.jpeg');
+  background-position:center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
 }
 * {
   padding: 0px;
@@ -19,6 +24,12 @@ code {
 /*! GENERALES  */
 .container{
   width: 80%;
+}
+button:active{
+  border: inset 2px #cacaca;
+}
+button:hover{
+  cursor: pointer;
 }
 /*! GENERALES  */
 
@@ -39,70 +50,128 @@ header{
   width: 100%;
   justify-content:space-around;
   align-items: center;
-  font-size: 1.5em;
+  font-size: 2vmax;
   color: #cacaca;
   
 }
 .iconCar{
   color: #cacaca;
-  font-size: 1.8em;
+  font-size: 3vmax;
 }
 
 /*! HEADER  */
 /*! COUNTER  */
-
+.itemCountContainer{
+  color: #cacaca;
+  display: flex;
+  justify-content: space-evenly;
+  /* margin-top: auto; */
+  padding-bottom: 1vmax;
+}
+.itemCountContainer button{
+  padding: .5vmax;
+  font-size: 1vmax;
+  border-radius: .3vmax;
+  background-color: #ef1c17;
+  color: #cacaca;
+  font-weight: bold;
+}
 /*! COUNTER  */
 
 /*!  LIST CONTAINER*/
 .itemListContainer{  
-  background-color: #262626;
+  background-color: rgba(38, 38, 38, .9);
   width: 80%;
   margin: 3em auto;
+  
 }
 .itemList{
   width: 100%;
   display: flex;
   flex-wrap: wrap;
   justify-content: space-around;
+  align-items: baseline;
 }
 .itemContainer{
   display: flex;
-  width: 20%;
-  margin: 1em 1em;
+  width: 22%;
+  margin: 1vmax 1vmax;
   flex-direction: column;
-  border-radius: 1em;
+  border-radius: 1vmax;
   box-shadow: 2px 2px 15px rgba(107, 107, 107, 0.5);
-
+  background-color: rgba(38, 38, 38, 1);
+  
 }
 .itemImg{
   border-radius: 1em;
 }
-.itemTextContainer{
+
+/*!  LIST CONTAINER*/
+
+/*! DETAIL CONTAINER  */
+.itemDetailContainer{
   text-align: center;
-  color: #cacaca;
-  font-size: large;
+  margin-bottom: 1em;
   
 }
-.itemTextContainer h3{
-  color: #ef1c17;
-  font-size: 1.5em;
-}
-.itemTextContainer p{  
-  font-size: 1em;
-}
-.itemCountContainer{
-  color: #cacaca;
-  display: flex;
-  justify-content: space-evenly;
-  margin-top: auto;
-  padding-bottom: 1em;
-}
-.itemCountContainer button{
-  padding: .5em;
-  font-size: 1em;
-  border-radius: .3em;
+.itemDetailContainer button{
+  padding: .5vmax;
+  font-size: 1vmax;
+  border-radius: .3vmax;
   background-color: #ef1c17;
   color: #cacaca;
   font-weight: bold;
+  margin-top: .5vmax;
 }
-/*!  LIST CONTAINER*/
+.itemDetail{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  color: #cacaca;
+  transition: all 300ms;
+}
+.itemDetail h3{
+  font-size: 2vmax;
+  width: 100%;
+  color: #ef1c17;
+}
+.itemDetail p{
+  font-size: 1.2vmax;
+  width: 90%;
+}
+.itemDetail label{
+  font-size: 1.5vmax;
+  width: auto;
+}
+
+.fadeOut{
+  animation: fadeOut 1s linear ;
+}
+.show{
+  animation: show 1s linear ; 
+}
+.d-flex{
+  display: flex;
+}
+.d-none{
+  display: none;
+}
+/*! DETAIL CONTAINER  */
+
+/*!ANIMACION  */
+@keyframes fadeOut {
+  from{
+    opacity: 1;
+  }to{
+    opacity: 0;
+  }
+}
+
+@keyframes show {
+  from{
+    opacity: 0;
+  }to{
+    opacity: 1;
+  }
+}
+

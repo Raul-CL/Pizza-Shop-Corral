@@ -1,16 +1,13 @@
 import React from 'react'
 import { ItemCount } from '../ItemCount'
+import { ItemDetailContainer } from './ItemDetailContainer'
 
 export const Item = ({item}) => {
     //console.log(item)
   return (
-    <article className='itemContainer'>
+    <article className='itemContainer '>
         <img src={item.thumbnail} className='itemImg'></img>
-        <div className='itemTextContainer'>
-        <h3>{item.title}</h3>
-        <p>{item.description}</p>
-        <label>${item.price}</label>
-        </div>
+        <ItemDetailContainer item={item}/>
         <ItemCount stock={item.stock} initial={1} ></ItemCount>
     </article>
     
