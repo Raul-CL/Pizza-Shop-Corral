@@ -3,7 +3,7 @@ import "./ItemCount.css"
 
 export const ItemCount = ({stock,initial}) => {
 
-  const [counter, setCounter] = useState(initial)
+  const [counter, setCounter] = useState(+initial)
   
   const plus = e =>{
     console.log(counter)  
