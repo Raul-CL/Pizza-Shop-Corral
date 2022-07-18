@@ -11,122 +11,12 @@ body {
   background-size: cover;
   background-attachment: fixed;
 }
-* {
-  padding: 0px;
-  margin: 0px;  
-  box-sizing: border-box;
-}
+
 
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
-/*! GENERALES  */
-
-button:active{
-  border: inset 2px #cacaca;
-}
-button:hover{
-  cursor: pointer;
-}
-/*! GENERALES  */
-
-/*! HEADER  */
-header{
-  display: flex;
-  background-color: #262626;
-  width: 70%;
-  margin: 0 auto;
-  max-height: 5%;
-  flex-wrap: nowrap;
-}
-.icon{
-  width: 10%;
-}
-.navbar{
-  display: flex;
-  width: 100%;
-  justify-content:space-around;
-  align-items: center;
-  font-size: 2vmax;
-  color: #cacaca;
-  
-}
-.iconCar{
-  color: #cacaca;
-  font-size: 3vmax;
-}
-
-/*! HEADER  */
-/*! COUNTER  */
-.itemCountContainer{
-  color: #cacaca;
-  display: flex;
-  justify-content: space-evenly;
-  /* margin-top: auto; */
-  padding-bottom: 1vmax;
-  
-  font-weight: bold;
-  margin-top: 1em;
-}
-.itemCountContainer button{
-  text-align: center;
-  padding: .5vmax;
-  font-size: 1vmax;
-  border-radius: .3vmax;
-  background-color: #ef1c17;
-  color: #cacaca;
-  font-weight: bold;
-  width: 2.5vmax;
-  
-}
-/*! COUNTER  */
-
-/*!  LIST CONTAINER*/
-.itemListContainer{  
-  background-color: rgba(38, 38, 38, .9);
-  width: 80%;
-  margin: 3em auto;
-  
-}
-.itemList{
-  width: 100%;
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-around;
-  align-items: baseline;
-}
-.itemContainer{
-  display: flex;
-  width: 22%;
-  margin: 1vmax 1vmax;
-  flex-direction: column;
-  border-radius: 1vmax;
-  box-shadow: 2px 2px 15px rgba(107, 107, 107, 0.5);
-  background-color: rgba(38, 38, 38, 1);
-  
-}
-.itemContainer h3{
-  color: #ef1c17;
-  font-size: 1.5vmax;
-  text-align: center;
-}
-.itemImg{
-  border-radius: 1em;
-}
-
-.itemButton{
-  color: #cacaca;
-  background-color: #ef1c17;
-  width: 100%;
-  border-radius: 1vmax;
-  font-size: 1.5vmax;
-  font-weight: bold;
-}
-
-/*!  LIST CONTAINER*/
-
-
 
 
 

@@ -2,6 +2,7 @@ import React, { useEffect, useState } from 'react'
 import ItemDetail from "./ItemDetail";
 import {products} from '../data/Products'
 import {useParams} from 'react-router-dom'
+import "./ItemDetail.css"
 
 export const ItemDetailContainer = () => {
   const [items, setItems] = useState([])
@@ -26,9 +27,7 @@ export const ItemDetailContainer = () => {
   },[id]);
 
   return (
-    <div className='itemDetailContainer'>
-        <ItemDetail item={items}/>
-    </div>
+    <ItemDetail item={items}/>    
   )
 }
 

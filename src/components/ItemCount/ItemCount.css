@@ -1,0 +1,21 @@
+.itemCountContainer{
+    color: #cacaca;
+    display: flex;
+    justify-content: space-evenly;
+    /* margin-top: auto; */
+    padding-bottom: 1vmax;
+    
+    font-weight: bold;
+    margin-top: 1em;
+  }
+  .itemCountContainer button{
+    text-align: center;
+    padding: .5vmax;
+    font-size: 1vmax;
+    border-radius: .3vmax;
+    background-color: #ef1c17;
+    color: #cacaca;
+    font-weight: bold;
+    width: 2.5vmax;
+    
+  }

@@ -7,7 +7,7 @@ export const products = [
         thumbnail:'/img/diavola-peperoni.jpg',
         price:89,
         stock:10,
-        category: "normal"
+        category: "Normal"
     },
     {
         id: 2,
@@ -16,7 +16,7 @@ export const products = [
         thumbnail:'/img/caprese-margarita.jpg',
         price:89,
         stock:15,
-        category: "normal"
+        category: "Normal"
     },
     {
         id: 3,
@@ -25,7 +25,7 @@ export const products = [
         thumbnail:'/img/hawaian.jpg',
         price:99,
         stock:1,
-        category: "normal"
+        category: "Normal"
     },
     {
         id: 4,
@@ -34,7 +34,7 @@ export const products = [
         thumbnail:'/img/gotti_cherry.jpg',
         price:109,
         stock:2,
-        category: "normal"
+        category: "Normal"
     },
     {
         id: 5,
@@ -43,7 +43,7 @@ export const products = [
         thumbnail:'/img/gambino.jpg',
         price:139,
         stock:10,
-        category: "normal"
+        category: "Normal"
     },
     {
         id: 6,
@@ -52,7 +52,7 @@ export const products = [
         thumbnail:'/img/tutti_la_Carne.jpg',
         price:129,
         stock:10,
-        category: "normal"
+        category: "Normal"
     },
     {
         id: 7,
@@ -61,7 +61,7 @@ export const products = [
         thumbnail:'/img/proscuito_e_funghi.jpg',
         price:129,
         stock:10,
-        category: "normal"
+        category: "Normal"
     },
     {
         id: 8,
@@ -70,7 +70,7 @@ export const products = [
         thumbnail:'/img/capricciosa.jpg',
         price:129,
         stock:10,
-        category: "normal"
+        category: "Normal"
     },
     {
         id: 9,
@@ -79,7 +79,7 @@ export const products = [
         thumbnail:'/img/stravaganza.jpg',
         price:149,
         stock:10,
-        category: "normal"
+        category: "Normal"
     },
     {
         id: 10,
@@ -88,7 +88,7 @@ export const products = [
         thumbnail:'/img/costello-atun.jpg',
         price:129,
         stock:10,
-        category: "normal"
+        category: "Normal"
     },
     {
         id: 11,
@@ -97,7 +97,7 @@ export const products = [
         thumbnail:'/img/ortolana-vegetariana.jpg',
         price:119,
         stock:10,
-        category: "normal"
+        category: "Normal"
     },
     {
         id: 12,
@@ -106,7 +106,7 @@ export const products = [
         thumbnail:'/img/cosa_nostra.jpg',
         price:129,
         stock:10,
-        category: "normal"
+        category: "Normal"
     },
     {
         id: 13,
@@ -115,6 +115,6 @@ export const products = [
         thumbnail:'/img/queattro_formaggi.jpg',
         price:129,
         stock:10,
-        category: "normal"
+        category: "Normal"
     }
 ]

@@ -1,0 +1,39 @@
+
+.itemDetail{
+    margin: 2vmax auto;
+    width: 40%;
+    display: flex;
+    flex-direction: column;
+    background-color: #262626;
+    border-radius: 1em;
+    flex-wrap: nowrap;
+}
+.itemDetail img{
+    border-radius: 1em;
+}
+.itemDetail h1{
+    color: #ef1c17;
+    font-size: 3vmax;
+    margin: 1vmax auto;
+}
+.itemDetailDescription{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    text-align: center;
+    font-size: 2vmax;
+    color: #cacaca;
+}
+.category{
+    width: 50%;
+
+}
+.price{
+    width: 50%;
+    color: green;
+    font-weight: bold;
+    
+}
+.description{
+    width: 100%;
+}

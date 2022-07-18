@@ -1,0 +1,44 @@
+.itemListContainer{  
+    background-color: rgba(38, 38, 38, .9);
+    width: 80%;
+    margin: 3em auto;
+    border-radius: 1em;
+    text-align: center;
+  }
+  .itemList{
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: baseline;
+  }
+  .itemContainer{
+    display: flex;
+    width: 22%;
+    margin: 1vmax 1vmax;
+    flex-direction: column;
+    border-radius: 1vmax;
+    box-shadow: 2px 2px 15px rgba(107, 107, 107, 0.5);
+    background-color: rgba(38, 38, 38, 1);
+    
+  }
+  .itemContainer h1{
+    color: #ef1c17;
+    font-size: 1.5vmax;
+    text-align: center;
+    font-weight: bold;
+  }
+  .itemImg{
+    border-radius: 1em;
+  }
+  
+  .itemButton{
+    color: #cacaca;
+    background-color: #ef1c17;
+    width: 95%;
+    border-radius: 1vmax;
+    font-size: 1.5vmax;
+    font-weight: bold;
+    margin-bottom: .4em;
+  }
+  

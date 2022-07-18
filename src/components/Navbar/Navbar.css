@@ -1,0 +1,44 @@
+header {
+  display: flex;
+  background-color: #262626;
+  width: 80%;
+  margin: 0 auto;
+  flex-wrap: nowrap;
+  justify-content: space-between;
+  
+}
+header a {
+  width: 15%;
+}
+.navIcon{
+    width: 100%;
+}
+
+nav {
+  display: flex;
+  width: 85%;
+  justify-content: space-around;
+  align-items: center;
+  font-size: 2vmax;
+  color: #cacaca;
+}
+.iconCar {
+  color: #cacaca;
+  font-size: 3vmax;
+}
+.link{
+    text-decoration: none;
+    color: #ef1c17;
+    background-color: #cacaca;
+    text-align: center;
+    border-radius: 1em;
+    padding: .3vmax;
+}
+.linkActive{
+    text-decoration: none;
+    color: #cacaca;
+    background-color: #ef1c17;
+    text-align: center;
+    border-radius: 1em;
+    padding: .3vmax;
+}
