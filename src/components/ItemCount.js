@@ -26,3 +26,5 @@ export const ItemCount = ({stock,initial}) => {
     </div>
   )
 }
+
+export default ItemCount;

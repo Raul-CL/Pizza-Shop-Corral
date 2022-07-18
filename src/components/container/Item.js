@@ -1,14 +1,14 @@
 import React from 'react'
-import { ItemCount } from '../ItemCount'
-import { ItemDetailContainer } from './ItemDetailContainer'
+import { Link } from 'react-router-dom'
+
 
 export const Item = ({item}) => {
     //console.log(item)
   return (
     <article className='itemContainer '>
         <img src={item.thumbnail} className='itemImg'></img>
-        <ItemDetailContainer item={item}/>
-        <ItemCount stock={item.stock} initial={1} ></ItemCount>
+        <h3>{item.title}</h3>
+        <Link to={`/item/${item.id}`}><button className='itemButton'>Ver detalles</button></Link>
     </article>
     
   )

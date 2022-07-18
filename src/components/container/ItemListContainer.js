@@ -1,27 +1,37 @@
 import React, { useEffect, useState } from 'react'
 import {products} from '../container/Products'
 import { ItemList } from './ItemList'
-
+import { useParams } from "react-router-dom";
 
 
 export const ItemListContainer = () => {
   const [items, setItems] = useState([])
-  
-  useEffect(()=>{
-    const getItems = new Promise((resolve, reject) => {
-      setTimeout(()=>{
-        resolve(products)
-      },1)
+  const [loading, setLoading] = useState(true);
+  const { category } = useParams()
+
+  const getItems = () => {
+    return new Promise(resolve => {
+      setLoading(true)
+      setTimeout(() => {
+        resolve(
+          category 
+          ? products.filter(product => product.category === category) 
+          : products          
+        )
+        console.log('cargada')
+      }, 1)
     })
-    getItems
-      .then(data =>{
-         //console.log(data)
-         setItems(data)
-      })
-      .catch((error)=>{
-        console.log(error)
-      }) 
-  },[])
+  }
+
+  useEffect(() => {
+    getItems()
+    .then(response =>{
+      setItems(response)
+      setLoading(false)
+    })
+  
+  }, [category])
+  
 
   //console.log(items)
   return (  

@@ -1,15 +1,16 @@
 import React from 'react'
 import { CartWidget } from './CartWidget'
+import {Link, NavLink} from 'react-router-dom'
 
 export const NavBar = () => {
   return (
     <header className='container'>
-        <img src='img/pizza-icon.png' alt='icon pizza' className='icon'></img>
+        <Link to='/'><img src='img/pizza-icon.png' alt='icon pizza' className='icon'></img></Link>
         <nav className='navbar'>
-            <label>Home</label>
-            <label>Menu</label>
-            <label>Ordenar</label>
-            <label>Ubicacion</label>
+            <Link to='' className='link'>Home</Link>
+            <Link to='' className='link'>Menu</Link>
+            <Link to='' className='link'>Ordenar</Link>
+            <Link to='' className='link'>Ubicacion</Link>
             <CartWidget/>
         </nav>
     </header>

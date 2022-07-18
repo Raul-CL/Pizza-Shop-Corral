@@ -1,36 +1,35 @@
-import React from 'react'
-import { ItemDetail } from './ItemDetail'
-import { useState } from 'react'
+import React, { useEffect, useState } from 'react'
+import ItemDetail from "./ItemDetail";
+import {products} from '../container/Products'
+import {useParams} from 'react-router-dom'
 
-export const ItemDetailContainer = ({item}) => {
-  const [detail, setDetail] = useState(false)
+export const ItemDetailContainer = () => {
+  const [items, setItems] = useState([])
+  const {id} = useParams()
+
+  const getItemsById = () => {
+    return new Promise(resolve => {
+      setTimeout(() => {
+        resolve(products.find(product => product.id === +id))
+        //console.log(products)
+      }, 1);
+    });
+  };
   
-  const show = (e) => {
-    let element = e.target.parentElement.childNodes[0]
-    console.log(e.target.parentElement.childNodes[0]
-      )
-    setDetail(!detail)
-    console.log(detail)
-    if(detail == true){    
-      element.classList.remove('d-none')
-      element.classList.remove('fadeOut')
-      element.classList.add('show')
-      element.classList.add('d-flex')
-    }else{
-      element.classList.remove('show')
-      element.classList.add('fadeOut')
-      setTimeout(()=>{
-        element.classList.remove('d-flex')
-        element.classList.add('d-none')
-      },1000)
-    }
-      
-  }
+  useEffect(() => {
+    getItemsById()
+    .then(response => {
+      console.log(response)
+      setItems(response)
+      console.log(items)
+    });
+  },[id]);
 
   return (
     <div className='itemDetailContainer'>
-        <ItemDetail item={item}/>
-        <button onClick={e => show(e,item.id)}>Ver detalles</button>
+        <ItemDetail item={items}/>
     </div>
   )
 }
+
+export default ItemDetailContainer;
