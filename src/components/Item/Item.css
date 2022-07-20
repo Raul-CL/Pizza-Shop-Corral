@@ -34,11 +34,15 @@
   
   .itemButton{
     color: #cacaca;
-    background-color: #ef1c17;
+    background-color: #262626;
     width: 95%;
     border-radius: 1vmax;
     font-size: 1.5vmax;
     font-weight: bold;
     margin-bottom: .4em;
+    transition: all 300ms;
   }
-  
+  .itemButton:hover{
+    background-color: #ef1c17;
+    box-shadow: 2px 2px 15px rgba(107, 107, 107, 0.5);
+  }
