@@ -17,5 +17,7 @@
     color: #cacaca;
     font-weight: bold;
     width: 2.5vmax;
-    
   }
+.itemCountContainer label{
+  font-size: 2vmax;
+}

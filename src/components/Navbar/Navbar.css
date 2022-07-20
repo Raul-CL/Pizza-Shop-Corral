@@ -1,17 +1,19 @@
 header {
   display: flex;
   background-color: #262626;
-  width: 80%;
+  width: 100%;
   margin: 0 auto;
   flex-wrap: nowrap;
   justify-content: space-between;
   
 }
-header a {
-  width: 15%;
-}
+
 .navIcon{
-    width: 100%;
+  width: 10%;
+}
+.navIcon img{
+  width: 100%;
+  height: 100%;
 }
 
 nav {
@@ -25,6 +27,10 @@ nav {
 .iconCar {
   color: #cacaca;
   font-size: 3vmax;
+  transition: all 300ms;
+}
+.iconCar:hover{
+  color: #ef1c17;
 }
 .link{
     text-decoration: none;
@@ -35,6 +41,7 @@ nav {
     padding: .5vmax;
     width: auto;
     font-weight: bold;
+    transition: all 300ms;
 
 }
 .linkActive{
@@ -46,5 +53,12 @@ nav {
     padding: .5vmax;
     width: auto;
     font-weight: bold;
+    transition: all 300ms;
+}
 
+.link:hover,
+.linkActive:hover{
+  box-shadow: 2px 2px 15px rgba(107, 107, 107, 0.5);
+  background-color: #ef1c17;
+  color: #cacaca;
 }
