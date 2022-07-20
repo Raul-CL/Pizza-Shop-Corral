@@ -16,7 +16,7 @@ export const products = [
         thumbnail:'/img/caprese-margarita.jpg',
         price:89,
         stock:15,
-        category: "Normal"
+        category: "Vegetarian"
     },
     {
         id: 3,
@@ -97,7 +97,7 @@ export const products = [
         thumbnail:'/img/ortolana-vegetariana.jpg',
         price:119,
         stock:10,
-        category: "Normal"
+        category: "Vegetarian"
     },
     {
         id: 12,
@@ -115,6 +115,6 @@ export const products = [
         thumbnail:'/img/queattro_formaggi.jpg',
         price:129,
         stock:10,
-        category: "Normal"
+        category: "Vegetarian"
     }
 ]

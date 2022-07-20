@@ -20,6 +20,7 @@ export const ItemDetail = ({item}) => {
       </div>
 
       <ItemCount stock={item.stock} price={item.price} initial='1'></ItemCount>
+      
     </article>
   )
 }

@@ -11,7 +11,7 @@ function App() {
       <NavBar/> {/*De esta forma Navbar se vera en todas las rutas   */}
       <Routes>
         <Route path='/' element={<ItemListContainer/>} />
-        <Route path='category/:category' element={<ItemDetailContainer/>} />
+        <Route path='category/:category' element={<ItemListContainer/>} />
         <Route path='item/:id' element={<ItemDetailContainer/>} />
       </Routes>
     </BrowserRouter>

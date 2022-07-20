@@ -32,7 +32,10 @@ nav {
     background-color: #cacaca;
     text-align: center;
     border-radius: 1em;
-    padding: .3vmax;
+    padding: .5vmax;
+    width: auto;
+    font-weight: bold;
+
 }
 .linkActive{
     text-decoration: none;
@@ -40,5 +43,8 @@ nav {
     background-color: #ef1c17;
     text-align: center;
     border-radius: 1em;
-    padding: .3vmax;
+    padding: .5vmax;
+    width: auto;
+    font-weight: bold;
+
 }
