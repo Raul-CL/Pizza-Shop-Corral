@@ -34,14 +34,15 @@ nav {
 }
 .link{
     text-decoration: none;
-    color: #ef1c17;
-    background-color: #cacaca;
+    color: #cacaca;
+    background-color: #262626;
     text-align: center;
     border-radius: 1em;
     padding: .5vmax;
     width: auto;
     font-weight: bold;
     transition: all 300ms;
+    border: #cacaca 2px inset;
 
 }
 .linkActive{
@@ -54,6 +55,7 @@ nav {
     width: auto;
     font-weight: bold;
     transition: all 300ms;
+    border: #cacaca 2px solid;
 }
 
 .link:hover,
