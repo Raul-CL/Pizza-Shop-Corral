@@ -10,6 +10,7 @@ export const NavBar = () => {
         <nav>
             <NavLink to="/category/Normal" className={({isActive})=>isActive? "linkActive" : "link"}>Carne</NavLink>
             <NavLink to="/category/Vegetarian" className={({isActive})=>isActive? "linkActive" : "link"}>Vegetarianas</NavLink>
+            <NavLink to="/category/Calzone" className={({isActive})=>isActive? "linkActive" : "link"}>Calzone</NavLink>
             <CartWidget/>
         </nav>
     </header>
