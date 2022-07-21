@@ -4,7 +4,7 @@ export const products = [
         id: 1,
         title:"Diavola Peperoni",
         description:"Tradicional pizza italiana",
-        thumbnail:'/img/diavola-peperoni.jpg',
+        thumbnail:'/img/diavola_pepperoni.jpg',
         price:89,
         stock:10,
         category: "Normal"
@@ -13,7 +13,7 @@ export const products = [
         id: 2,
         title:"Caprese Margarita",
         description:"Deliciosa con albahaca, jitomate y aceite de oliva",
-        thumbnail:'/img/caprese-margarita.jpg',
+        thumbnail:'/img/caprese_margarita.jpg',
         price:89,
         stock:15,
         category: "Vegetarian"
@@ -116,5 +116,41 @@ export const products = [
         price:129,
         stock:10,
         category: "Vegetarian"
+    },
+    {
+        id: 14,
+        title:"Calzone La carne",
+        description:"Exquisito pan relleno de queso mozzarella, jamón, peperoni, salchicha, salami y salsa italiana.",
+        thumbnail:'/img/calzone_carnes_frias.jpg',
+        price:39,
+        stock:10,
+        category: "Calzone"
+    },
+    {
+        id: 15,
+        title:"Calzone dolce",
+        description:"Queso mozzarella, azul, parmesano y panela, con un toque de albahaca.",
+        thumbnail:'/img/calzone_dulce.jpg',
+        price:39,
+        stock:10,
+        category: "Calzone"
+    },
+    {
+        id: 16,
+        title:"Calzone Hawaiano",
+        description:"Riquísimo pan relleno de queso mozzarella, jamón, piña y salsa italiana.",
+        thumbnail:'/img/calzone_hawaiano.jpg',
+        price:39,
+        stock:10,
+        category: "Calzone"
+    },
+    {
+        id: 17,
+        title:"Calzone Pepperoni",
+        description:"Te van a encantar, relleno fruta y queso philadelphia. Elige tu sabor.",
+        thumbnail:'/img/calzone_peperoni.jpg',
+        price:25,
+        stock:5,
+        category: "Calzone"
     }
 ]
