@@ -3,6 +3,7 @@ import {products} from '../data/Products'
 import { ItemList } from './ItemList'
 import { useParams } from "react-router-dom";
 import "./Item.css"
+import { Loader } from '../Loader/Loader';
 
 
 export const ItemListContainer = () => {
@@ -17,10 +18,10 @@ export const ItemListContainer = () => {
         resolve(
           category 
           ? products.filter(product => product.category === category) 
-          : products          
+          : products
         )
         console.log('cargada')
-      }, 1)
+      }, 1000)
     })
   }
 
@@ -36,9 +37,12 @@ export const ItemListContainer = () => {
 
   //console.log(items)
   return (  
-    <section className='itemListContainer'>
-    <ItemList items={items}></ItemList>
+    <>{
+      loading ? <Loader/>
+      : <section className='itemListContainer'>
+      <ItemList items={items}></ItemList>
     </section>
+    }</>
     
   )
 }
