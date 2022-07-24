@@ -7,6 +7,7 @@ import "./ItemDetail.css"
 export const ItemDetailContainer = () => {
   const [items, setItems] = useState([])
   const {id} = useParams()
+  
 
   const getItemsById = () => {
     return new Promise(resolve => {
