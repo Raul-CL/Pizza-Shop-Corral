@@ -8,24 +8,25 @@ export const ItemDetailContainer = () => {
   const [items, setItems] = useState([])
   const {id} = useParams()
   
-
-  const getItemsById = () => {
-    return new Promise(resolve => {
-      setTimeout(() => {
-        resolve(products.find(product => product.id === +id))
-        //console.log(products)
-      }, 1);
-    });
-  };
-  
   useEffect(() => {
+    const getItemsById = () => {
+      return new Promise(resolve => {
+        setTimeout(() => {
+          resolve(products.find(product => product.id === +id))
+          //console.log(products)
+        }, 1)
+      })
+    }
+
     getItemsById()
+
     .then(response => {
       console.log(response)
       setItems(response)
       console.log(items)
-    });
-  },[id]);
+    })
+    //eslint-disable-next-line
+  },[id])
 
   return (
     <ItemDetail item={items}/>    

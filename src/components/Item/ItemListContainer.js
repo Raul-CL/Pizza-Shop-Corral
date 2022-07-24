@@ -11,27 +11,28 @@ export const ItemListContainer = () => {
   const [loading, setLoading] = useState(true);
   const { category } = useParams()
 
-  const getItems = () => {
-    return new Promise(resolve => {
-      setLoading(true)
-      setTimeout(() => {
-        resolve(
-          category 
-          ? products.filter(product => product.category === category) 
-          : products
-        )
-        console.log('cargada')
-      }, 1000)
-    })
-  }
+
 
   useEffect(() => {
+    const getItems = () => {
+      return new Promise(resolve => {
+        setLoading(true)
+        setTimeout(() => {
+          resolve(
+            category 
+            ? products.filter(product => product.category === category) 
+            : products
+          )
+          console.log('cargada')
+        }, 1000)
+      })
+    }
+    
     getItems()
     .then(response =>{
       setItems(response)
       setLoading(false)
-    })
-  
+    })  
   }, [category])
   
 
