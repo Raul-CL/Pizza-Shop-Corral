@@ -1,6 +1,6 @@
 import React from 'react'
 import ItemCount from '../ItemCount/ItemCount'
-import { useState } from 'react'
+
 
 
 export const ItemDetail = ({item}) => {
