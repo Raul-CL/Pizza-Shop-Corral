@@ -12,7 +12,7 @@ const Provider = (props) => {
 
   const addToCart = (item, quantity) => {
     if(isInCart(item.id)){
-       changeQueantity(item,quantity)
+       changeQuantity(item,quantity)
        console.log(cart);
     }else{
       setCart([...cart, { ...item, quantity }])
@@ -24,7 +24,7 @@ const Provider = (props) => {
     return cart.some((item) => item.id === id)
   };
 
-  const changeQueantity = (item,quantity) =>{
+  const changeQuantity = (item,quantity) =>{
     cart.forEach((obj, index) =>{
         obj.id === item.id && setCart(cart.splice(index,1))
     })
