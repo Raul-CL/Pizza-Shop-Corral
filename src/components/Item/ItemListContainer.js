@@ -23,8 +23,7 @@ export const ItemListContainer = () => {
             ? products.filter(product => product.category === category) 
             : products
           )
-          console.log('cargada')
-        }, 1000)
+        }, 1)
       })
     }
     

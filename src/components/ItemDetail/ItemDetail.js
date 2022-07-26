@@ -1,12 +1,17 @@
-import React from 'react'
+/* eslint-disable no-undef */
+import React, { useContext , useState} from 'react'
 import ItemCount from '../ItemCount/ItemCount'
-
+import { CartContext } from '../../context/cartContext';
 
 
 export const ItemDetail = ({item}) => {
+  const [quantity, setQuantity] = useState(0)
+   const {addToCart} = useContext(CartContext)
     
   const onAdd = (number) => {
-    console.log("tienes "+number+" elementos")
+    setQuantity(number);
+    addToCart(item, number);
+    
   }
   
   return (

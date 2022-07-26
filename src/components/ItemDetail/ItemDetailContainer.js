@@ -12,18 +12,14 @@ export const ItemDetailContainer = () => {
     const getItemsById = () => {
       return new Promise(resolve => {
         setTimeout(() => {
-          resolve(products.find(product => product.id === +id))
-          //console.log(products)
+          resolve(products.find(product => product.id === +id))          
         }, 1)
       })
     }
-
     getItemsById()
 
     .then(response => {
-      console.log(response)
       setItems(response)
-      console.log(items)
     })
     //eslint-disable-next-line
   },[id])
