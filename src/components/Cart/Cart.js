@@ -1,23 +1,18 @@
 /* eslint-disable array-callback-return */
 import React, { useContext } from "react";
 import { CartContext } from "../../context/cartContext";
+import { ItemCart } from "./ItemCart";
+import "./Cart.css"
 
 export const Cart = () => {
-  const { cart } = useContext(CartContext);
+  const {cart, clearCart}  = useContext(CartContext);
 
-  cart.map((item) => {
-    console.log(item)
-    console.log(item.thumbnail)
-    console.log(item.title)
-    console.log(item.price)
-    console.log(item.quantity)
-    
-  })
   return (
-    <div className='itemCart'>
+    <div className='cart'>
         {cart.length > 0 ? cart.map((item) => (
-            <itemCart item={item} key={item.id} />
+            <ItemCart item={item} key={item.id} />
         )): "Error al cargar elemento"}
+        <button className="cartCleartBtn" onClick={()=>{clearCart()}}>Eliminar del carrito</button>
     </div>
   )
 };
