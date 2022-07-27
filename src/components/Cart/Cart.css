@@ -4,6 +4,8 @@
     margin: 1vmax auto;
     border-radius: 1em;
     padding: 1em;
+    display: flex;
+    flex-direction: column;
 }
 
 .itemCart{
@@ -47,4 +49,4 @@
 .cartCleartBtn:hover{
     background-color: #ef1c17;
     box-shadow: 2px 2px 15px rgba(107, 107, 107, 0.5);
-  }
+}

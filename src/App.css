@@ -27,7 +27,12 @@
 .App-link {
   color: #61dafb;
 }
-
+.msjError{
+  color: #ee202c;
+  font-size: 2vmax;
+  text-align: center;
+  font-weight: bold;
+}
 @keyframes App-logo-spin {
   from {
     transform: rotate(0deg);

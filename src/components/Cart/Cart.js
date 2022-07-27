@@ -9,9 +9,9 @@ export const Cart = () => {
 
   return (
     <div className='cart'>
-        {cart.length > 0 ? cart.map((item) => (
-            <ItemCart item={item} key={item.id} />
-        )): "Error al cargar elemento"}
+        {cart.length > 0 
+        ? cart.map(item => <ItemCart item={item} key={item.id} />)
+        : <p className="msjError">El carrito esta vacio...</p>}
         <button className="cartCleartBtn" onClick={()=>{clearCart()}}>Eliminar del carrito</button>
     </div>
   )
