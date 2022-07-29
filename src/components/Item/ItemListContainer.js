@@ -1,5 +1,4 @@
 import React, { useEffect, useState } from "react";
-//import {products} from '../data/Products'
 import { ItemList } from "./ItemList";
 import { useParams } from "react-router-dom";
 import "./Item.css";
@@ -26,7 +25,7 @@ export const ItemListContainer = () => {
     
   }, [category]);
 
-  //console.log(items)
+
   return (
     <>
       {loading ? (
