@@ -46,3 +46,9 @@
     background-color: #ef1c17;
     box-shadow: 2px 2px 15px rgba(107, 107, 107, 0.5);
   }
+  .itemList_404{  
+  text-align: center;
+  font-size: 3vmax;
+  font-weight: bold;
+  color: #cacaca;
+  }
