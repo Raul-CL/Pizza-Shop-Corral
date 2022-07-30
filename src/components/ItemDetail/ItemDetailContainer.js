@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react'
 import ItemDetail from "./ItemDetail";
 //import {products} from '../data/Products'
 import {useParams} from 'react-router-dom'
-import { getDocs, getFirestore, collection, where, query, doc, getDoc, exists} from "firebase/firestore";
+import { getFirestore,  doc, getDoc} from "firebase/firestore";
 import "./ItemDetail.css"
 
 export const ItemDetailContainer = () => {
@@ -27,7 +27,7 @@ export const ItemDetailContainer = () => {
     const docRef = doc(db, "items", id);
     getDoc(docRef)
     .then((doc) => {
-      console.log({'id': doc.id, ...doc.data()})
+      //console.log({'id': doc.id, ...doc.data()})
       setItems({id: doc.id, ...doc.data()});
     }) 
     
