@@ -1,7 +1,6 @@
 
 export const products = [
     {
-        id: 1,
         title:"Diavola Peperoni",
         description:"Tradicional pizza italiana",
         thumbnail:'/img/diavola_pepperoni.jpg',
@@ -10,7 +9,6 @@ export const products = [
         category: "Normal"
     },
     {
-        id: 2,
         title:"Caprese Margarita",
         description:"Deliciosa con albahaca, jitomate y aceite de oliva",
         thumbnail:'/img/caprese_margarita.jpg',
@@ -19,7 +17,6 @@ export const products = [
         category: "Vegetarian"
     },
     {
-        id: 3,
         title:"Hawaian",
         description:"Perfecta combinacion de piña y jamon",
         thumbnail:'/img/hawaian.jpg',
@@ -28,7 +25,6 @@ export const products = [
         category: "Normal"
     },
     {
-        id: 4,
         title:"Gotti Cherry",
         description:"Con piña, jamon, cereza y cebolla morada",
         thumbnail:'/img/gotti_cherry.jpg',
@@ -37,7 +33,6 @@ export const products = [
         category: "Normal"
     },
     {
-        id: 5,
         title:"Gambino",
         description:"Piña, jamón, tocino y cebolla",
         thumbnail:'/img/gambino.jpg',
@@ -46,7 +41,6 @@ export const products = [
         category: "Normal"
     },
     {
-        id: 6,
         title:"Tutti La Carne",
         description:"Salami, salchicha, jamón y peperoni",
         thumbnail:'/img/tutti_la_Carne.jpg',
@@ -55,7 +49,6 @@ export const products = [
         category: "Normal"
     },
     {
-        id: 7,
         title:"Proscuito E Funghi",
         description:"Jamón, champiñon y tocino.",
         thumbnail:'/img/proscuito_e_funghi.jpg',
@@ -64,7 +57,6 @@ export const products = [
         category: "Normal"
     },
     {
-        id: 8,
         title:"Capricciosa",
         description:"Jamón, champiñones, aceituna y albahaca",
         thumbnail:'/img/capricciosa.jpg',
@@ -73,7 +65,6 @@ export const products = [
         category: "Normal"
     },
     {
-        id: 9,
         title:"Stravaganza",
         description:"Salami, piña, cebolla morada, champiñón, aceituna y pimiento.",
         thumbnail:'/img/stravaganza.jpg',
@@ -82,7 +73,6 @@ export const products = [
         category: "Normal"
     },
     {
-        id: 10,
         title:"Costello Atun",
         description:"Aceituna, atún, jitomate y elote.",
         thumbnail:'/img/costello-atun.jpg',
@@ -91,7 +81,6 @@ export const products = [
         category: "Normal"
     },
     {
-        id: 11,
         title:"Ortolana Vegetariana",
         description:"Champiñón, pimiento, cebolla morada, aceituna y elote.",
         thumbnail:'/img/ortolana-vegetariana.jpg',
@@ -100,7 +89,6 @@ export const products = [
         category: "Vegetarian"
     },
     {
-        id: 12,
         title:"Cosa Nostra",
         description:"Chorizo, jitomate, elote, cebolla morada y jalapeño.",
         thumbnail:'/img/cosa_nostra.jpg',
@@ -109,7 +97,6 @@ export const products = [
         category: "Normal"
     },
     {
-        id: 13,
         title:"Quattro Formaggi",
         description:"Queso mozzarella, azul, parmesano y panela, con un toque de albahaca.",
         thumbnail:'/img/queattro_formaggi.jpg',
@@ -118,7 +105,6 @@ export const products = [
         category: "Vegetarian"
     },
     {
-        id: 14,
         title:"Calzone La carne",
         description:"Exquisito pan relleno de queso mozzarella, jamón, peperoni, salchicha, salami y salsa italiana.",
         thumbnail:'/img/calzone_carnes_frias.jpg',
@@ -127,7 +113,6 @@ export const products = [
         category: "Calzone"
     },
     {
-        id: 15,
         title:"Calzone dolce",
         description:"Queso mozzarella, azul, parmesano y panela, con un toque de albahaca.",
         thumbnail:'/img/calzone_dulce.jpg',
@@ -136,7 +121,6 @@ export const products = [
         category: "Calzone"
     },
     {
-        id: 16,
         title:"Calzone Hawaiano",
         description:"Riquísimo pan relleno de queso mozzarella, jamón, piña y salsa italiana.",
         thumbnail:'/img/calzone_hawaiano.jpg',
@@ -145,7 +129,6 @@ export const products = [
         category: "Calzone"
     },
     {
-        id: 17,
         title:"Calzone Pepperoni",
         description:"Te van a encantar, relleno fruta y queso philadelphia. Elige tu sabor.",
         thumbnail:'/img/calzone_peperoni.jpg',

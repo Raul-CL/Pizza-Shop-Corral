@@ -1,3 +1,4 @@
+/* eslint-disable no-unused-vars */
 /* eslint-disable no-undef */
 import React, { useContext , useState} from 'react'
 import ItemCount from '../ItemCount/ItemCount'
@@ -11,7 +12,6 @@ export const ItemDetail = ({item}) => {
   const onAdd = (number) => {
     setQuantity(number);
     addToCart(item, number);
-    
   }
   
   return (
