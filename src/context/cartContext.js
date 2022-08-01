@@ -12,7 +12,7 @@ const Provider = (props) => {
         title:"Diavola Peperoni",
         description:"Tradicional pizza italiana",
         thumbnail:'/img/diavola_pepperoni.jpg',
-        price:89,
+        price:75,
         quantity: 5,
         stock: 5,
         category: "Normal"

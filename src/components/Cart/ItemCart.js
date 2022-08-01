@@ -1,7 +1,7 @@
 import React from 'react'
 
 export const ItemCart = ({item}) => {
-  console.log(item)
+  //console.log(item)
   return (
     <div className='itemCart'>
       <img src={item.thumbnail} className='itemCartImg' alt={item.title} ></img>

@@ -7,6 +7,16 @@
     display: flex;
     flex-direction: column;
 }
+.CartTotal{
+    text-align: center;
+    font-size: 2vmax;
+    font-weight: bold;
+    color: #ef1c17;
+}
+.CartTotal:only-of-type label{
+    color: green;
+}
+
 
 .itemCart{
     display: flex;
