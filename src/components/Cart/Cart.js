@@ -19,10 +19,14 @@ export const Cart = () => {
         {cart.length > 0 
         ? cart.map(item => <ItemCart item={item} key={item.id} />)
         : (<p className="msjError">Tu carrito esta vacio...</p>,
-        <Link to='/' ><button className="cartCleartBtn">Regresar al inicio</button></Link>
+        <Link to='/' ><button className="cartBtn">Regresar al inicio</button></Link>
         )}
-        <button className="cartCleartBtn" onClick={()=>{clearCart()}}>Eliminar del carrito</button>
+        <div className="btnContainer">
+          <button className="cartBtn" onClick={()=>{clearCart()}}>Eliminar del carrito</button>
+          <button className="cartBtn shop" >Confirmar compra</button>
+        </div>
         <p className="CartTotal">Total a pagar: <label>${calcutalteTotal(cart)}</label></p>
     </div>
   )
 };
+

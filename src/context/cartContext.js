@@ -8,7 +8,7 @@ const Provider = (props) => {
   //testeo de objetos cart
   const [cart, setCart] = useState([
     {
-        id: 1,
+        id: '1dVX8PQN1PJzGox4hYE5',
         title:"Diavola Peperoni",
         description:"Tradicional pizza italiana",
         thumbnail:'/img/diavola_pepperoni.jpg',
@@ -18,7 +18,7 @@ const Provider = (props) => {
         category: "Normal"
     },
     {
-        id: 2,
+        id: 'FfWGT8ZJ0uQGpBdahRyH',
         title:"Caprese Margarita",
         description:"Deliciosa con albahaca, jitomate y aceite de oliva",
         thumbnail:'/img/caprese_margarita.jpg',
@@ -35,7 +35,7 @@ const Provider = (props) => {
 
   const addToCart = (item, quantity) => {
     if(isInCart(item.id)){
-       removeItem(item,quantity)
+       addItem(item,quantity)
        //console.log(cart);
     }else{
       setCart([...cart, { ...item, quantity }])
@@ -47,7 +47,7 @@ const Provider = (props) => {
     return cart.some((item) => item.id === id)
   };
 
-  const removeItem = (item,quantity) =>{
+  const addItem = (item,quantity) =>{
     cart.forEach((obj, index) =>{
         obj.id === item.id && setCart(cart.splice(index,1))
     })
@@ -58,9 +58,15 @@ const Provider = (props) => {
     setCart([])
   }
 
+  const plus = (item,quantity) =>{
+    cart.forEach((obj,index) =>{
+      obj.id === item.id && setCart(cart.splice(index,1))
+    })
+    addToCart(item,quantity)
+  }
 
   return (
-    <CartContext.Provider value={{ cart, addToCart,clearCart }}>
+    <CartContext.Provider value={{ cart, addToCart,clearCart,plus }}>
       {props.children}
     </CartContext.Provider>
   );

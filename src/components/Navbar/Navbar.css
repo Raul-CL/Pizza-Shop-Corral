@@ -29,9 +29,13 @@ nav {
   font-size: 3vmax;
   transition: all 300ms;
 }
-.iconCar:hover{
-  color: #ef1c17;
+.inconNumber:nth-child(){
+  color: green;
 }
+.iconCar:hover{
+  color: green;
+}
+
 .link{
     text-decoration: none;
     color: #cacaca;
