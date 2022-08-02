@@ -11,8 +11,6 @@ export const Cart = () => {
   const calcutalteTotal = (array) =>{
     return array.map(item => item.price * item.quantity).reduce((prev, curre)=>  prev + curre, 0)
   }
-
-
   
   return (
     <div className='cart'>

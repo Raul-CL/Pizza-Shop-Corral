@@ -44,6 +44,8 @@ const Provider = (props) => {
   };
 
   const isInCart = (id) => {
+    console.log(id)
+    console.log(cart.some((item) => item.id === id))
     return cart.some((item) => item.id === id)
   };
 
@@ -63,6 +65,7 @@ const Provider = (props) => {
       obj.id === item.id && setCart(cart.splice(index,1))
     })
     addToCart(item,quantity)
+    console.log(cart);
   }
 
   return (
