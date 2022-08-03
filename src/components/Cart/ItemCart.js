@@ -11,7 +11,6 @@ export const ItemCart = ({item}) => {
         <h1>{item.title}</h1>
         <p>${item.price} x {item.quantity} = {item.price * item.quantity}</p>
         <AdderCart item={item} quantity={item.quantity} key={item.id}/>
-        
       </div>
     </div>
   )

@@ -30,7 +30,7 @@ const Provider = (props) => {
   ]);
 
   useEffect(() => {
-    //console.log(cart);
+    
   }, [cart]);
 
   const addToCart = (item, quantity) => {
