@@ -44,8 +44,8 @@ const Provider = (props) => {
   };
 
   const isInCart = (id) => {
-    console.log(id)
-    console.log(cart.some((item) => item.id === id))
+    //console.log(id)
+    //console.log(cart.some((item) => item.id === id))
     return cart.some((item) => item.id === id)
   };
 
@@ -60,16 +60,20 @@ const Provider = (props) => {
     setCart([])
   }
 
-  const plus = (item,quantity) =>{
-    cart.forEach((obj,index) =>{
-      obj.id === item.id && setCart(cart.splice(index,1))
+  const plusToCart = (item,quantity) =>{
+
+    const newCart = cart.map(product =>{
+      if (item.id === product.id){
+        return {...product, quantity: quantity}
+      } else {
+        return product
+      }
     })
-    addToCart(item,quantity)
-    console.log(cart);
+    setCart(newCart)
   }
 
   return (
-    <CartContext.Provider value={{ cart, addToCart,clearCart,plus }}>
+    <CartContext.Provider value={{ cart, addToCart,clearCart,plusToCart }}>
       {props.children}
     </CartContext.Provider>
   );
