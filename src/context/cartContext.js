@@ -60,14 +60,21 @@ const Provider = (props) => {
   }
 
   const plusToCart = (item,quantity) =>{
-    const newCart = cart.map(product =>{
-      if (item.id === product.id){
-        return {...product, quantity: quantity}
-      } else {
-        return product
-      }
-    })
-    setCart(newCart)
+    console.log(quantity);
+    if(quantity <= 0){
+      const newCart = cart.filter((product) => product.id !== item.id)
+      setCart(newCart)
+    }else{
+      const newCart = cart.map(product =>{
+        if (item.id === product.id){
+          return {...product, quantity: quantity}
+        } else {
+          return product
+        }
+      })
+      setCart(newCart)
+    }
+
   }
 
   return (
