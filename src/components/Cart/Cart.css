@@ -17,7 +17,6 @@
     color: green;
 }
 
-
 .itemCart{
     display: flex;
     width: 100%;
@@ -46,6 +45,7 @@
     color: green;
     font-weight: bold;
     font-size: 2vmax;
+    margin-bottom: .5vmax;
 }
 .btnContainer{
     display: flex;
@@ -67,4 +67,15 @@
 .shop:hover{
     background-color: green;
     box-shadow: 2px 2px 15px rgba(107, 107, 107, 0.5);
+}
+.btnAdder{
+    text-align: center;
+    padding: .5vmax;
+    font-size: 1vmax;
+    border-radius: .3vmax;
+    background-color: #ef1c17;
+    color: #cacaca;
+    font-weight: bold;
+    width: 2.5vmax;
+    margin: .5vmax 2vmax;
 }
