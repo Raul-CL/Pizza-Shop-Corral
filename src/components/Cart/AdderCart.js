@@ -6,8 +6,8 @@ const AdderCart = ({item,quantity}) => {
 
   return (
     <div className='adderContainer'>
-       <button className='btnAdder' onClick={()=>{plusToCart(item,quantity+1)}}>+</button>
        <button className='btnAdder' onClick={()=>{plusToCart(item,quantity-1)}}>-</button>
+      <button className='btnAdder' onClick={()=>{plusToCart(item,quantity+1)}}>+</button>
     </div>
   )
 }
