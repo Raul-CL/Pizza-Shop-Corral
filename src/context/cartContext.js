@@ -50,18 +50,16 @@ const Provider = (props) => {
   };
 
   const addItem = (item,quantity) =>{
-    cart.forEach((obj, index) =>{
-        obj.id === item.id && setCart(cart.splice(index,1))
-    })
-    addToCart(item,quantity)
-  }
+    const newCart = cart.filter((product) => product.id !== item.id)
+    setCart([...newCart,{...item,quantity}])
+    //console.log(cart);
+  }  
 
   const clearCart = ()=>{
     setCart([])
   }
 
   const plusToCart = (item,quantity) =>{
-
     const newCart = cart.map(product =>{
       if (item.id === product.id){
         return {...product, quantity: quantity}
