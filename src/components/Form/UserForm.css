@@ -1,0 +1,50 @@
+.UserFormContainer{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    margin-top: 3vmax;
+}
+.personForm{
+    font-size: 1.5vmax;
+    font-weight: bold;
+    color: #cacaca;
+    width: 20vw;
+    padding: 1vmax;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    background: rgba(17, 17, 17, 0.664);
+    border-radius: 16px;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.185);
+    backdrop-filter: blur(5px);
+    -webkit-backdrop-filter: blur(5px);
+    border: 1px solid rgba(17, 17, 17, 0.253);
+}
+.personForm label{
+    margin-bottom: .5vmax;
+}
+.personForm label input{
+    color: #cacaca;
+    background-color: #262626;
+    border: none;
+    border-radius: .5vmax;
+    padding-left: .5vmax;
+    font-weight: bold;
+    font-size: 1.5vmax;
+}
+.personForm input[type=submit]{
+    width: 30%;
+    align-self: center;
+    color: #cacaca;
+    background-color: #262626;
+    border-radius: .5em;
+    font-size: 1.2vmax;
+    font-weight: bold;
+    transition: all 300ms;
+    margin: 0px 2vmax;
+}
+.personForm input[type=submit]:hover{
+    background-color: green;
+    box-shadow: 2px 2px 15px rgba(107, 107, 107, 0.5);
+}

@@ -42,6 +42,6 @@
   }
 }
 
-button:active{
+button:active,input:active{
   border-color: #cacaca;
 }
