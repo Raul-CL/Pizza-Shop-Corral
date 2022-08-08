@@ -11,16 +11,24 @@ export const Cart = () => {
   const {cart, clearCart}  = useContext(CartContext);
   const db = getFirestore();
   
+
   const calcutalteTotal = (array) =>{
     return array.map(item => item.price * item.quantity).reduce((prev, curre)=>  prev + curre, 0)
   }
-  console.log(cart);
+  
+  const createOrder = (cart) =>{
+    let orderItems = []
+    cart.map(item => orderItems.push({title:item.title, id:item.id, price:item.price, quantity: item.quantity}))
+    return orderItems
+  }
+
+  
   //! funcion para enviar datos
   const sendOrder = async () => {
     const person = {buyer:"Admin", email:"admin@gmail.com", phone:"61233333"}
     try {
       const docRef = await addDoc(collection(db, "orders"), {
-        ...person, items : cart
+        ...person, items : createOrder(cart),
     });
       console.log("Document written with ID: ", docRef.id)
       alert("Orden enviada correctamente, ID de orden: " + docRef.id)
