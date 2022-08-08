@@ -21,7 +21,6 @@ export const Cart = () => {
     cart.map(item => orderItems.push({title:item.title, id:item.id, price:item.price, quantity: item.quantity}))
     return orderItems
   }
-
   
   //! funcion para enviar datos
   const sendOrder = async () => {
@@ -44,13 +43,15 @@ export const Cart = () => {
     <div className='cart'>
         {cart.length > 0 
         ? cart.map(item => <ItemCart item={item} key={item.id} />)
-        : (<p className="msjError">Tu carrito esta vacio...</p>,
-        <Link to='/' ><button className="cartBtn">Regresar al inicio</button></Link>
+        : (<><p className="msjError">Tu carrito esta vacio...</p>
+        <Link to='/' style={{"text-align":'center'}}><button className="cartBtn">Regresar al inicio</button></Link></>
         )}
-        <div className="btnContainer">
-          <button className="cartBtn" onClick={()=>{clearCart()}}>Eliminar del carrito</button>
-          <button className="cartBtn shop"onClick={()=>{sendOrder()}} >Confirmar compra</button>
-        </div>
+        {cart.length > 0
+        && (<div className="btnContainer">
+        <button className="cartBtn" onClick={()=>{clearCart()}}>Eliminar del carrito</button>
+        <button className="cartBtn shop"onClick={()=>{sendOrder()}} >Confirmar compra</button>
+      </div>)
+        }
         <p className="CartTotal">Total a pagar: <label>${calcutalteTotal(cart)}</label></p>
     </div>
   )
