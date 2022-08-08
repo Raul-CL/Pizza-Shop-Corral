@@ -28,7 +28,10 @@ export const Cart = () => {
     const person = {buyer:"Admin", email:"admin@gmail.com", phone:"61233333"}
     try {
       const docRef = await addDoc(collection(db, "orders"), {
-        ...person, items : createOrder(cart),
+        ...person, 
+        items : createOrder(cart), 
+        date: new Date(),
+        total: calcutalteTotal(cart)
     });
       console.log("Document written with ID: ", docRef.id)
       alert("Orden enviada correctamente, ID de orden: " + docRef.id)
