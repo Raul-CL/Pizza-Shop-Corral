@@ -4,7 +4,7 @@ import { CartContext } from "../../context/cartContext";
 import { ItemCart } from "./ItemCart";
 import "./Cart.css"
 import { Link } from "react-router-dom";
-import { collection, getFirestore, doc, getDoc, addDoc  } from "firebase/firestore";
+import { collection, getFirestore,/*  doc, getDoc, */ addDoc  } from "firebase/firestore";
 
 
 export const Cart = () => {
@@ -14,7 +14,7 @@ export const Cart = () => {
   const calcutalteTotal = (array) =>{
     return array.map(item => item.price * item.quantity).reduce((prev, curre)=>  prev + curre, 0)
   }
-
+  console.log(cart);
   //! funcion para enviar datos
   const sendOrder = async () => {
     const person = {buyer:"Admin", email:"admin@gmail.com", phone:"61233333"}
