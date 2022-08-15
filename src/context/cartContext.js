@@ -59,6 +59,13 @@ const Provider = (props) => {
     setCart([])
   }
 
+  const [user,setUser] = useState({
+    name:'',
+    phone:'',
+    email:''
+  })
+
+
   const plusToCart = (item,quantity) =>{
     console.log(quantity);
     if(quantity <= 0){
@@ -78,7 +85,7 @@ const Provider = (props) => {
   }
 
   return (
-    <CartContext.Provider value={{ cart, addToCart,clearCart,plusToCart }}>
+    <CartContext.Provider value={{ cart, addToCart,clearCart,plusToCart,user,setUser }}>
       {props.children}
     </CartContext.Provider>
   );

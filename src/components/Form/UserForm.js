@@ -1,16 +1,13 @@
-import React, {useState} from 'react'
+import React, {useContext} from 'react'
+import { CartContext } from "../../context/cartContext";
 import './UserForm.css'
 
+
 export const UserForm = () => {
-    const [person, setPerson] = useState({
-        name:'',
-        phone:'',
-        email:''
-    })
+    const {user, setUser}  = useContext(CartContext)
+    console.log(user);
 
     const handleChange = (e) => {
-        //this.setState({value: e.target.value});
-        //console.log(e.target.name);
         e.target.name === 'name' && handleNameChange(e.target.value)
         e.target.name === 'phone' && handlePhoneChange(e.target.value)
         e.target.name === 'email' && handleEmailChange(e.target.value)
@@ -18,39 +15,38 @@ export const UserForm = () => {
     
     const handleSubmit = (e) => {
         e.preventDefault();
-        alert('A name was submitted: ' + JSON.stringify(person));
+        alert('A name was submitted: ' + JSON.stringify(user));
     }
 
     const handleNameChange = (name) =>{
-        setPerson({...person, name: name}) 
+        setUser({...user, name: name}) 
     }
 
     const handlePhoneChange = (phone) =>{
-        setPerson({...person, phone: phone})
+        setUser({...user, phone: phone})
     }
 
     const handleEmailChange = (email) =>{
-        setPerson({...person, email: email})
+        setUser({...user, email: email})
     }
 
     return (
         <div className='UserFormContainer'>
-            <form onSubmit={(e)=>handleSubmit(e)} className="personForm" autocomplete="off">
+            <form onSubmit={(e)=>handleSubmit(e)} className="personForm" >
               <label>
                 Name:
-                <input type="text" name='name' value={person.name.value} onChange={(e)=>{handleChange(e)}} />
+                <input type="text" name='name' value={user.name.value} onChange={(e)=>{handleChange(e)}} autoComplete="off"/>
               </label>
               <label>
                 Phone:
-                <input type="tel" name='phone' value={person.phone.value} onChange={(e)=>{handleChange(e)}} />
+                <input type="tel" name='phone' value={user.phone.value} onChange={(e)=>{handleChange(e)}} autoComplete="off"/>
               </label>
               <label>
                 Email:
-                <input type="email" name='email' value={person.email.value} onChange={(e)=>{handleChange(e)}} />
+                <input type="email" name='email' value={user.email.value} onChange={(e)=>{handleChange(e)}} autoComplete="off"/>
               </label>
-              <input type="submit" value="Submit" />
+              <input type="submit" value="Enviar" />
             </form>
-
         </div>
     );
 }

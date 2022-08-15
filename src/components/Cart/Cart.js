@@ -9,6 +9,7 @@ import { collection, getFirestore,/*  doc, getDoc, */ addDoc  } from "firebase/f
 
 export const Cart = () => {
   const {cart, clearCart}  = useContext(CartContext);
+
   const db = getFirestore();
   
 
@@ -24,7 +25,7 @@ export const Cart = () => {
   
   //! funcion para enviar datos
   const sendOrder = async () => {
-    const person = {buyer:"Admin", email:"admin@gmail.com", phone:"61233333"}
+    const person = {buyer:"Admin", email:"admin@gmail.com", phone:"61233333"}   
     try {
       const docRef = await addDoc(collection(db, "orders"), {
         ...person, 
