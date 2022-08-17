@@ -5,7 +5,6 @@ import './UserForm.css'
 
 export const UserForm = () => {
     const {user, setUser}  = useContext(CartContext)
-    console.log(user);
 
     const handleChange = (e) => {
         e.target.name === 'name' && handleNameChange(e.target.value)
@@ -15,7 +14,11 @@ export const UserForm = () => {
     
     const handleSubmit = (e) => {
         e.preventDefault();
-        alert('A name was submitted: ' + JSON.stringify(user));
+        //console.log(user);
+        if(user.name.length >= 3 && user.phone.length === 10 && user.email.length >= 3){
+          setUser({...user, status: true}) 
+        }
+        //alert('A name was submitted: ' + JSON.stringify(user))        
     }
 
     const handleNameChange = (name) =>{

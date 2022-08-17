@@ -25,7 +25,8 @@ export const Cart = () => {
   
   //! funcion para enviar datos
   const sendOrder = async () => {
-    const person = user   
+    if(user.status === true){
+    const person = user
     try {
       const docRef = await addDoc(collection(db, "orders"), {
         ...person, 
@@ -37,7 +38,7 @@ export const Cart = () => {
       alert("Orden enviada correctamente, ID de orden: " + docRef.id)
     } catch (e) {
       console.error("Error adding document: ", e);
-    }
+    }}else console.log("Favor de llenar formulario con sus datos");
   };
   
   return (
