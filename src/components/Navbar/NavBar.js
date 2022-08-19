@@ -5,7 +5,8 @@ import {Link, NavLink} from 'react-router-dom'
 
 //todo RENDERIZAR UN MENU CON PERFIL CUANDO SE LLENA EL FORMULARIO
 
-export const NavBar = () => { 
+export const NavBar = () => {
+   
   return (
     <header>
         <Link to='/' className='navIcon'><img src='/img/pizza-icon.jpg' alt='icon pizza' ></img></Link>

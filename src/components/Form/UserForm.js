@@ -13,12 +13,16 @@ export const UserForm = () => {
     }
     
     const handleSubmit = (e) => {
-        e.preventDefault();
-        //console.log(user);
-        if(user.name.length >= 3 && user.phone.length === 10 && user.email.length >= 3){
-          setUser({...user, status: true}) 
-        }
-        //alert('A name was submitted: ' + JSON.stringify(user))        
+      e.preventDefault();
+      if(user.name.length > 3){
+        if(user.phone.length === 10){
+          if(user.phone.length >5){
+            setUser({...user, status: true}) 
+            alert('Datos enviados correctamente')
+          }else{alert('Error debe de completar datos en el formulario ERROR Email')}
+        }else{alert('Error debe de completar datos en el formulario ERROR Telefono')}
+      }else{alert('Error debe de completar datos en el formulario ERROR Nombre')}
+                 
     }
 
     const handleNameChange = (name) =>{

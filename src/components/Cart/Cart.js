@@ -38,7 +38,7 @@ export const Cart = () => {
       alert("Orden enviada correctamente, ID de orden: " + docRef.id)
     } catch (e) {
       console.error("Error adding document: ", e);
-    }}else console.log("Favor de llenar formulario con sus datos");
+    }}else alert("Favor de llenar formulario con sus datos");
   };
   
   return (
