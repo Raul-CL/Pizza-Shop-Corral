@@ -39,18 +39,18 @@ export const UserForm = () => {
 
     return (
         <div className='UserFormContainer'>
-            <form onSubmit={(e)=>handleSubmit(e)} className="personForm" >
+            <form onSubmit={(e)=>handleSubmit(e)} className="personForm" autoComplete='off'>
               <label>
                 Name:
-                <input type="text" name='name' value={user.name.value} onChange={(e)=>{handleChange(e)}} autoComplete="off"/>
+                <input type="text" name='name' value={user.name} onChange={(e)=>{handleChange(e)}} />
               </label>
               <label>
                 Phone:
-                <input type="tel" name='phone' value={user.phone.value} onChange={(e)=>{handleChange(e)}} autoComplete="off"/>
+                <input type="tel" name='phone' value={user.phone} onChange={(e)=>{handleChange(e)}} />
               </label>
               <label>
                 Email:
-                <input type="email" name='email' value={user.email.value} onChange={(e)=>{handleChange(e)}} autoComplete="off"/>
+                <input type="email" name='email' value={user.email} onChange={(e)=>{handleChange(e)}} />
               </label>
               <input type="submit" value="Enviar" />
             </form>

@@ -4,8 +4,6 @@ import "./Navbar.css"
 import {Link, NavLink} from 'react-router-dom'
 import { CartContext } from '../../context/cartContext'
 
-//todo RENDERIZAR UN MENU CON PERFIL CUANDO SE LLENA EL FORMULARIO
-
 export const NavBar = () => {
   const {user} = useContext(CartContext) 
   return (

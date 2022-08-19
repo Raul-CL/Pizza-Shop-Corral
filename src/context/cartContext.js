@@ -1,11 +1,8 @@
 import { createContext, useState, useEffect } from "react";
 
 export const CartContext = createContext();
-//console.log(CartContext);
 
 const Provider = (props) => {
-  //const [cart, setCart] = useState([]);
-  //testeo de objetos cart
   const [cart, setCart] = useState([
     {
         id: '1dVX8PQN1PJzGox4hYE5',
@@ -36,23 +33,18 @@ const Provider = (props) => {
   const addToCart = (item, quantity) => {
     if(isInCart(item.id)){
        addItem(item,quantity)
-       //console.log(cart);
     }else{
       setCart([...cart, { ...item, quantity }])
-      //console.log(cart);
     }
   };
 
   const isInCart = (id) => {
-    //console.log(id)
-    //console.log(cart.some((item) => item.id === id))
     return cart.some((item) => item.id === id)
   };
 
   const addItem = (item,quantity) =>{
     const newCart = cart.filter((product) => product.id !== item.id)
     setCart([...newCart,{...item,quantity}])
-    //console.log(cart);
   }  
 
   const clearCart = ()=>{
@@ -67,7 +59,6 @@ const Provider = (props) => {
 
 
   const plusToCart = (item,quantity) =>{
-    console.log(quantity);
     if(quantity <= 0){
       const newCart = cart.filter((product) => product.id !== item.id)
       setCart(newCart)
