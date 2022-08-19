@@ -1,10 +1,10 @@
 import React, {useContext} from 'react'
 import { CartContext } from "../../context/cartContext";
 import './UserForm.css'
-
+import Swal from 'sweetalert2'
 
 export const UserForm = () => {
-    const {user, setUser}  = useContext(CartContext)
+    const {user, setUser, toast ,alertSuccess}  = useContext(CartContext)
 
     const handleChange = (e) => {
         e.target.name === 'name' && handleNameChange(e.target.value)
@@ -16,12 +16,12 @@ export const UserForm = () => {
       e.preventDefault();
       if(user.name.length > 3){
         if(user.phone.length === 10){
-          if(user.phone.length >5){
+          if(user.email.length >5){
             setUser({...user, status: true}) 
-            alert('Datos enviados correctamente')
-          }else{alert('Error debe de completar datos en el formulario ERROR Email')}
-        }else{alert('Error debe de completar datos en el formulario ERROR Telefono')}
-      }else{alert('Error debe de completar datos en el formulario ERROR Nombre')}
+            alertSuccess("Datos guardados correctamente","Ya puede realizar pedidos")
+          }else{toast.fire({ icon: 'error',title: 'El email debe tener mas de 5 caracteres'})}
+        }else{toast.fire({ icon: 'error',title: 'El telefono debe de tener 10 digitos'})}
+      }else{toast.fire({ icon: 'error',title: 'El nombre debe tener mas de 3 caracteres'})}
                  
     }
 

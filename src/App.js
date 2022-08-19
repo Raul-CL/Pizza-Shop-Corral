@@ -14,7 +14,7 @@ function App() {
     // eslint-disable-next-line react/jsx-no-undef
     <Provider>
       <BrowserRouter>
-        <NavBar/> 
+        <NavBar/>
         <Routes>
           <Route path='/' element={<ItemListContainer/>} />
           <Route path='category/:category' element={<ItemListContainer/>} />

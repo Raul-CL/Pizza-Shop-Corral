@@ -7,11 +7,12 @@ import { CartContext } from '../../context/cartContext';
 
 export const ItemDetail = ({item}) => {
   const [quantity, setQuantity] = useState(0)
-   const {addToCart} = useContext(CartContext)
+   const {addToCart, toast} = useContext(CartContext)
     
   const onAdd = (number) => {
     setQuantity(number);
     addToCart(item, number);
+    toast.fire({ icon: 'success',title: `Se agregaron ${number} pizzas al carrito`})
   }
   
   return (

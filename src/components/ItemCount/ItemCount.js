@@ -1,16 +1,18 @@
-import React, { useState } from 'react'
+import React, { useState, useContext } from 'react'
 import "./ItemCount.css"
+import { CartContext } from '../../context/cartContext';
 
 
 export const ItemCount = ({stock, initial, onAdd}) => {
   
-  const [count, setCount] = useState(+initial)
+  const [count, setCount,] = useState(+initial)
+  const { toast } = useContext(CartContext)
 
   const add = () =>{
-    count < stock && setCount(count + 1)
+    count < stock ? setCount(count + 1) : toast.fire({ icon: 'error',title: `El estock actual es de ${stock}`});
   }
   const remove = () =>{
-    count > initial && setCount(count - 1)
+    count > initial ? setCount(count - 1) : toast.fire({ icon: 'error',title: `No puedes agregar menos de ${initial}`});
   }
 
   return (

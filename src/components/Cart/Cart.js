@@ -7,8 +7,9 @@ import { Link } from "react-router-dom";
 import { collection, getFirestore,/*  doc, getDoc, */ addDoc  } from "firebase/firestore";
 
 
+
 export const Cart = () => {
-  const {cart, clearCart,user}  = useContext(CartContext);
+  const {cart, clearCart,user, alertSuccess, toast}  = useContext(CartContext);
 
   const db = getFirestore();
   
@@ -34,11 +35,11 @@ export const Cart = () => {
         date: new Date(),
         total: calcutalteTotal(cart)
     });
-      console.log("Document written with ID: ", docRef.id)
-      alert("Orden enviada correctamente, ID de orden: " + docRef.id)
+      alertSuccess("Orden enviada correctamente",`ID de orden: ${docRef.id}`)
+      
     } catch (e) {
       console.error("Error adding document: ", e);
-    }}else alert("Favor de llenar formulario con sus datos");
+    }}else  toast.fire({ icon: 'error',title: `Para realizar un pedido debes llenar ul formulario antes`});
   };
   
   return (
