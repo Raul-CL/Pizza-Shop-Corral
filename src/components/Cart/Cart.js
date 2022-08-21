@@ -39,7 +39,7 @@ export const Cart = () => {
       
     } catch (e) {
       console.error("Error adding document: ", e);
-    }}else  toast.fire({ icon: 'error',title: `Para realizar un pedido debes llenar ul formulario antes`});
+    }}else  toast.fire({ icon: 'error',title: `Para realizar un pedido debes llenar el formulario antes`});
   };
   
   return (
