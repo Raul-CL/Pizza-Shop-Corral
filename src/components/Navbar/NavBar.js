@@ -8,7 +8,7 @@ export const NavBar = () => {
   const {user} = useContext(CartContext) 
   return (
     <header>
-        <Link to='/' className='navIcon'><img src='/img/pizza-icon.jpg' alt='icon pizza' ></img></Link>
+        <Link to='/' className='navIcon'><img src='https://res.cloudinary.com/drks8fgea/image/upload/v1661131341/Pizza-Shop-Corral/pizza-icon_kl8wgc.jpg' alt='icon pizza' ></img></Link>
         <nav>
             <NavLink to="/category/Normal" className={({isActive})=>isActive? "linkActive" : "link"}>Carne</NavLink>
             <NavLink to="/category/Vegetarian" className={({isActive})=>isActive? "linkActive" : "link"}>Vegetarianas</NavLink>
