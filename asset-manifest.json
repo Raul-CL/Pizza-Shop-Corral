@@ -1,0 +1,14 @@
+{
+  "files": {
+    "main.css": "/Pizza-Shop-Corral/static/css/main.f6b71d52.css",
+    "main.js": "/Pizza-Shop-Corral/static/js/main.a236c62e.js",
+    "static/media/background_01.jpeg": "/Pizza-Shop-Corral/static/media/background_01.a8c754b96de9df9ffec8.jpeg",
+    "index.html": "/Pizza-Shop-Corral/index.html",
+    "main.f6b71d52.css.map": "/Pizza-Shop-Corral/static/css/main.f6b71d52.css.map",
+    "main.a236c62e.js.map": "/Pizza-Shop-Corral/static/js/main.a236c62e.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.f6b71d52.css",
+    "static/js/main.a236c62e.js"
+  ]
+}
