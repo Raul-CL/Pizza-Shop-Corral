@@ -3,12 +3,13 @@ import React, { useContext } from "react";
 import { CartContext } from "../../context/cartContext";
 import { ItemCart } from "./ItemCart";
 import "./Cart.css"
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import { collection, getFirestore,/*  doc, getDoc, */ addDoc  } from "firebase/firestore";
 
 
 
 export const Cart = () => {
+  const navigate = useNavigate()
   const {cart, clearCart,user, alertSuccess, toast}  = useContext(CartContext);
 
   const db = getFirestore();
@@ -35,7 +36,9 @@ export const Cart = () => {
         date: new Date(),
         total: calcutalteTotal(cart)
     });
-      alertSuccess("Orden enviada correctamente",`ID de orden: ${docRef.id}`)
+    alertSuccess("Orden enviada correctamente",`ID de orden: ${docRef.id}`)
+    clearCart()
+    navigate('/') 
       
     } catch (e) {
       console.error("Error adding document: ", e);

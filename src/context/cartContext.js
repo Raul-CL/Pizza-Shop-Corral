@@ -58,7 +58,7 @@ const Provider = (props) => {
       title: title,
       text: text,
       showConfirmButton: false,
-      timer: 1500,
+      timer: 3000,
       background:"#262626",
       color:"#cacaca",
     })
