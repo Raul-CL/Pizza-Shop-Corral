@@ -21,7 +21,7 @@
 
 <h1> Demo</h1>
 <p dir="auto"> <animated-image data-catalyst="" style="width: 500px;">
-  <img src="https://github.com/Raul-CL/Pizza-Shop-Corral/blob/main/Untitled.gif?raw=true" height="320" aling="center" style="max-width: 100%; display: inline-block;" data-target="animated-image.originalImage">
+  <img src="https://github.com/Raul-CL/Pizza-Shop-Corral/blob/main/GIF.gif?raw=true" height="320" aling="center" style="max-width: 100%; display: inline-block;" data-target="animated-image.originalImage">
 <p>El funcionamiento es muy sencillo, podemos navegar libremente por la pagina buscando en las diferentes categorias que existe, tambien agregar cualquier cantidad de productos siempre y cuando este numero no supere el stock del producto. <br/>
 Si agregamos productos al carrito nos aparesera el carrito en la esquina superior derecha, este nos mostrara los productos del carrito y el costo total. <br/>
 Para poder realizar un pedido antes tenemos que registrar los datos en el formulario con el icono de persona, el cual nos pedira nombre, telefono y correo. <br/>
