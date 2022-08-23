@@ -1,7 +1,7 @@
 import React, {useContext} from 'react'
 import { CartContext } from "../../context/cartContext";
 import './UserForm.css'
-import Swal from 'sweetalert2'
+
 
 export const UserForm = () => {
     const {user, setUser, toast ,alertSuccess}  = useContext(CartContext)
